@@ -7,16 +7,16 @@ var colors = require('colors');
 //     console.log(statMode.toString());
 // });
 
-fs.readdir('./node_modules', 'utf-8', function(err, file) {
+fs.readdir('./node_modules', 'utf-8', function(err, files) {
     // console.log('Dane przed zapisem!'.blue);
-    // console.log(file);
-	fs.writeFile('./tekst.txt', './node_modules', function(err) {
+    console.log(files);
+	fs.writeFile('./tekst.txt', files, function(err) {
         if (err) throw err;
         // console.log('Zapisano!'.blue);
-        fs.readdir('./node_modules', 'utf-8', function(err, file) {
-            // console.log('Dane po zapisie'.blue)
-            console.log(file);
-        });
+        // fs.readdir('./node_modules', 'utf-8', function(err, files) {
+        //     // console.log('Dane po zapisie'.blue)
+        //     console.log(files);
+        // });
     });
   });
 

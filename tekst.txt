@@ -1,1 +1,1 @@
-./node_modules
+colors,fs,start,stat-mode
